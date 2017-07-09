@@ -28,7 +28,7 @@ export function dsp(t) {
   else 
     i = 5;
   return 1 * (
-    + 0.1 * Math.sin(2 * Math.PI * t * bass_seq[i])
+    + 0.05 * tri(bass_seq[i],t)
     //+ 0.02 * (sqw(880,t*LFO2(1/3,t))*LFO2(1/2 ,t))
     + 0.4 * env(1/2,(140),5,5,t)
     + (0.01 * chord(880,1000,1200,t)*Math.exp(-(t%4))
